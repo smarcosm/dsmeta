@@ -19,12 +19,13 @@ function SalesCard() {
   useEffect(() => {
     const dmin = minDate.toISOString().slice(0, 10);
     const dmax = maxDate.toISOString().slice(0, 10);
-    console.log(dmin);
 
-    axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`).then((response) => {
-      setSales(response.data.content);
-      console.log(response.data.content);
-    });
+    axios
+      .get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
+      .then((response) => {
+        setSales(response.data.content);
+        console.log(response.data.content);
+      });
   }, [minDate, maxDate]);
 
   return (
@@ -65,18 +66,20 @@ function SalesCard() {
                 </tr>
               </thead>
               <tbody>
-                {sales.map((sales) => {
+                {sales.map((sale) => {
                   return (
-                    <tr key={sales.id}>
-                      <td className="show992">{sales.id}</td>
-                      <td className="show576">{new Date(sales.date).toLocaleDateString()}</td>
-                      <td>{sales.sellerName}</td>
-                      <td className="show992">{sales.visited}</td>
-                      <td className="show992">{sales.deals}</td>
-                      <td>{sales.amount.toFixed(2)}</td>
+                    <tr key={sale.id}>
+                      <td className="show992">{sale.id}</td>
+                      <td className="show576">
+                        {new Date(sale.date).toLocaleDateString()}
+                      </td>
+                      <td>{sale.sellerName}</td>
+                      <td className="show992">{sale.visited}</td>
+                      <td className="show992">{sale.deals}</td>
+                      <td>{sale.amount.toFixed(2)}</td>
                       <td>
                         <div className="dsmeta-red-btn-container">
-                          <NotificationButtom />
+                          <NotificationButtom saleId={sale.id} />
                         </div>
                       </td>
                     </tr>
