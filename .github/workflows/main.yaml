@@ -1,0 +1,17 @@
+on:
+  push:
+    branches: [main]
+jobs:
+  web-deploy:
+      name: Deploy website on push
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+        - name: Sync files
+          uses: SamKiland/FTP-Deploy-Action@4.0.0
+          with:
+            server: ${{secret.FTP_HOST}}
+            username: ${{secrets.FTP_USERNAME}}
+            password: ${{ secrets.FTP_PASSWOD }}
+            server_dir: /home2/smarco30/
