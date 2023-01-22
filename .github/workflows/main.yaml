@@ -13,5 +13,5 @@ jobs:
           with:
             server: ${{secrets.FTP_HOST}}
             username: ${{secrets.FTP_USERNAME}}
-            password: ${{ secrets.FTP_PASSWOD }}
-            server_dir: /home2/smarco30/
+            password: ${{ secrets.FTP_PASSWORD }}
+            server_dir: /home2/smarco30/dsmeta.smarcosm.com
