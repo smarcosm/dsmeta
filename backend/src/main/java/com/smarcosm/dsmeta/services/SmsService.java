@@ -13,16 +13,16 @@ import com.twilio.type.PhoneNumber;
 @Service
 public class SmsService {
 
-	@Value("${twilio.sid}")
+	@Value("${TWILIO_ACCOUNT_SID}")
 	private String twilioSid;
 
-	@Value("${twilio.key}")
+	@Value("${TWILIO_AUTH_TOKEN}")
 	private String twilioKey;
 
-	@Value("${twilio.phone.from}")
+	@Value("${TWILIO_PHONE_NUMBER}")
 	private String twilioPhoneFrom;
 
-	@Value("${twilio.phone.to}")
+	@Value("${TWILIO_PHONE_NUMBER_TO}")
 	private String twilioPhoneTo;
 	
 	@Autowired
