@@ -9,7 +9,7 @@
 
 ## 📝 Descrição
 
-Aplicação de listagem de vendas, com a opção de filtrar determinados períodos de vendas por data.
+Aplicação de listagem de vendas, com a opção de filtrar determinados períodos de vendas por data. E notificar por SMS o vendedor que atingiu a meta. 
 
 - Site final: [DsMeta 🌐](https://smarcosm-dsmeta.netlify.app/)
 
