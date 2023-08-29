@@ -1,5 +1,5 @@
 
-<h1 style="text-align: center">
+<h1 align="center">
   DSMETA 📊
 </h1>
 <p style="text-align: center">
@@ -68,4 +68,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ---
 
-  <h3 style="text-align: center"> Developed by <a href="https://www.linkedin.com/in/smarcosm/">Sebastião Marcos</a> ☕</h3>
+  <h3 align="center"> Developed by <a href="https://www.linkedin.com/in/smarcosm/">Sebastião Marcos</a> ☕</h3>
